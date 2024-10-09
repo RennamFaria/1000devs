@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1017 {
-    public static void main(String[] args){
+    public void ex1017() {
         Scanner input = new Scanner(System.in);
         int time, speed;
         double liters;

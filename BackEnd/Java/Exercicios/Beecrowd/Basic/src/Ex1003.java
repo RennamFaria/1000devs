@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1003 {
-    public static void main(String[] args){
+    public void ex1003() {
         Scanner input = new Scanner(System.in);
         int a, b, sum;
 

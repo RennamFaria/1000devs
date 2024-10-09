@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1009 {
-    public static void main (String[] arg){
+    public void ex1009() {
         Scanner input = new Scanner(System.in);
         double salary, monthSells, total;
         String name;

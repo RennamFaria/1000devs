@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1008 {
-    public static void main (String[] arg){
+    public void ex1008() {
         Scanner input = new Scanner(System.in);
         int qntEmpl, hours;
         float salary, total;

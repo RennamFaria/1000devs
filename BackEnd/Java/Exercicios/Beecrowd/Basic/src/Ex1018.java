@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1018 {
-    public static void main(String[] args){
+    public void ex1018() {
         Scanner input = new Scanner(System.in);
         int money, hundred = 0, fifty = 0, twenty = 0, ten = 0, five = 0, two = 0, one = 0;
 

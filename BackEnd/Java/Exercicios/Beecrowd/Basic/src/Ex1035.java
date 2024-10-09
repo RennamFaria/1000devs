@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1035 {
-    public static void main(String[] args){
+    public void ex1035() {
         Scanner input = new Scanner(System.in);
         int a, b, c, d;
 

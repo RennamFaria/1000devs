@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1011 {
-    public static void main(String[] args){
+    public void ex1011() {
         Scanner input = new Scanner(System.in);
         double radius, pi, volume;
 

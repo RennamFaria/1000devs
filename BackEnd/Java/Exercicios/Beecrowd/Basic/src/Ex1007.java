@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1007 {
-    public static void main (String[] arg){
+    public void ex1007() {
         Scanner input = new Scanner(System.in);
         int a, b, c, d, dif;
 

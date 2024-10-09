@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1010 {
-    public static void main (String[] arg){
+    public void ex1010() {
         Scanner input = new Scanner(System.in);
         int id, qntProducts;
         double price, total;

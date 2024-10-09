@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1006 {
-    public static void main(String[] args){
+    public void ex1006() {
         Scanner input = new Scanner(System.in);
         double a, b, c, weighA, weighB, weighC, avg;
 

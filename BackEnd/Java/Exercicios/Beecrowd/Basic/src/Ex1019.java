@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1019 {
-    public static void main(String[] args){
+    public void ex1019() {
         Scanner input = new Scanner(System.in);
         int seconds, hours = 0, minutes = 0;
 

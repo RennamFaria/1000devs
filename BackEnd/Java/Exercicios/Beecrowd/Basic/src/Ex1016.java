@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1016 {
-    public static void main(String[] args){
+    public void ex1016() {
         Scanner input = new Scanner(System.in);
         int distance, time;
 

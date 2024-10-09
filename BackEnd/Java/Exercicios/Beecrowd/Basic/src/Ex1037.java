@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1037 {
-    public static void main(String[] args){
+    public void ex1037() {
         Scanner input = new Scanner(System.in);
         double value;
 

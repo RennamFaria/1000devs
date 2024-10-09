@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex1021 {
-    public static void main(String[] args){
+    public void ex1021() {
         Scanner input = new Scanner(System.in);
         double money;
         int counter; 
