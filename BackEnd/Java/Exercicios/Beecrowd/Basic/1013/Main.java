@@ -1,9 +1,12 @@
 import java.util.Scanner; 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:BackEnd/Java/Exercicios/Beecrowd/Basic/src/Ex1013.java
 public class Ex1013{
     public void ex1013() {
 =======
+=======
+>>>>>>> parent of 4bd71d8 (Reorganization of codes)
 public class Main {
     public static void main(String[] args){
 >>>>>>> parent of 4bd71d8 (Reorganization of codes):BackEnd/Java/Exercicios/Beecrowd/Basic/1013/Main.java
