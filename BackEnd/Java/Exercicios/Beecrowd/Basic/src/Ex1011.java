@@ -1,23 +1,7 @@
 import java.util.Scanner;
-
-<<<<<<< HEAD:BackEnd/Java/Exercicios/Beecrowd/Basic/1011/Main.java
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:BackEnd/Java/Exercicios/Beecrowd/Basic/src/Ex1011.java
+ 
 public class Ex1011 {
-    public void ex1011() {
-=======
-=======
->>>>>>> parent of 4bd71d8 (Reorganization of codes)
-=======
->>>>>>> parent of 4bd71d8 (Reorganization of codes)
-public class Main {
     public static void main(String[] args){
->>>>>>> parent of 4bd71d8 (Reorganization of codes):BackEnd/Java/Exercicios/Beecrowd/Basic/1011/Main.java
-=======
-public class Ex1011 {
-    public void ex1011() {
->>>>>>> parent of 6d073f8 (fix):BackEnd/Java/Exercicios/Beecrowd/Basic/src/Ex1011.java
         Scanner input = new Scanner(System.in);
         double radius, pi, volume;
 

@@ -1,23 +1,7 @@
 import java.util.Scanner;
-
-<<<<<<< HEAD:BackEnd/Java/Exercicios/Beecrowd/Basic/1018/Main.java
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:BackEnd/Java/Exercicios/Beecrowd/Basic/src/Ex1018.java
+ 
 public class Ex1018 {
-    public void ex1018() {
-=======
-=======
->>>>>>> parent of 4bd71d8 (Reorganization of codes)
-=======
->>>>>>> parent of 4bd71d8 (Reorganization of codes)
-public class Main {
     public static void main(String[] args){
->>>>>>> parent of 4bd71d8 (Reorganization of codes):BackEnd/Java/Exercicios/Beecrowd/Basic/1018/Main.java
-=======
-public class Ex1018 {
-    public void ex1018() {
->>>>>>> parent of 6d073f8 (fix):BackEnd/Java/Exercicios/Beecrowd/Basic/src/Ex1018.java
         Scanner input = new Scanner(System.in);
         int money, hundred = 0, fifty = 0, twenty = 0, ten = 0, five = 0, two = 0, one = 0;
 

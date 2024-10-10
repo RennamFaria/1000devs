@@ -1,23 +1,7 @@
 import java.util.Scanner;
-
-<<<<<<< HEAD:BackEnd/Java/Exercicios/Beecrowd/Basic/1006/Main.java
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:BackEnd/Java/Exercicios/Beecrowd/Basic/src/Ex1006.java
+ 
 public class Ex1006 {
-    public void ex1006() {
-=======
-=======
->>>>>>> parent of 4bd71d8 (Reorganization of codes)
-=======
->>>>>>> parent of 4bd71d8 (Reorganization of codes)
-public class Main {
     public static void main(String[] args){
->>>>>>> parent of 4bd71d8 (Reorganization of codes):BackEnd/Java/Exercicios/Beecrowd/Basic/1006/Main.java
-=======
-public class Ex1006 {
-    public void ex1006() {
->>>>>>> parent of 6d073f8 (fix):BackEnd/Java/Exercicios/Beecrowd/Basic/src/Ex1006.java
         Scanner input = new Scanner(System.in);
         double a, b, c, weighA, weighB, weighC, avg;
 
