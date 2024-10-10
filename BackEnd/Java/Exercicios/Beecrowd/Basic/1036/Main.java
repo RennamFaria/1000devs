@@ -2,10 +2,13 @@ import java.util.Scanner;
 import java.lang.Math; 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:BackEnd/Java/Exercicios/Beecrowd/Basic/src/Ex1036.java
 public class Ex1036 {
     public void ex1036() {
 =======
+=======
+>>>>>>> parent of 4bd71d8 (Reorganization of codes)
 =======
 >>>>>>> parent of 4bd71d8 (Reorganization of codes)
 public class Main {
