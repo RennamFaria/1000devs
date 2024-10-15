@@ -3,13 +3,14 @@ import java.util.Scanner;
 public class Ex1010 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        int id, qntProducts;
+        //int id;
+        int qntProducts;
         double price, total;
 
         total = 0f;
 
         for(int i = 0; i < 2; i++){
-            id = input.nextInt();
+            //id = input.nextInt();
 
             qntProducts = input.nextInt();
 

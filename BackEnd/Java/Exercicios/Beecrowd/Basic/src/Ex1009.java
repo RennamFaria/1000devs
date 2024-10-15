@@ -4,9 +4,9 @@ public class Ex1009 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         double salary, monthSells, total;
-        String name;
+        //String name;
 
-        name = input.nextLine();
+        //name = input.nextLine();
 
         salary = input.nextFloat();
         input.nextLine();
