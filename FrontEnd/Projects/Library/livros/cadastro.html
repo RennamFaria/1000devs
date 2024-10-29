@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Cadastro de livros</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- MENU -->
+    <header class="w3-bar w3-black">
+        <a href="../index.html" class="w3-bar-item w3-button w3-mobile w3-green">Home</a>
+        <nav class="w3-dropdown-hover w3-mobile">
+            <button class="w3-button">Cadastro</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border w3-dark-grey">
+                <a href="../alunos/cadastro.html" class="w3-bar-item w3-button w3-green w3-mobile">Alunos</a>
+                <a href="../professores/cadastro.html" class="w3-bar-item w3-button w3-green w3-mobile">Professsores</a>
+                <a href="#" class="w3-bar-item w3-button w3-green w3-mobile">Autores</a>
+                <a href="#" class="w3-bar-item w3-button w3-green w3-mobile">Categorias</a>
+                <a href="#" class="w3-bar-item w3-button w3-green w3-mobile">Editoras</a>
+                <a href="../livros/cadastro.html" class="w3-bar-item w3-button w3-green w3-mobile">Livros</a>
+            </div>
+        </nav>
+        <nav class="w3-dropdown-hover w3-mobile">
+            <button class="w3-button">Emprestimo</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border w3-dark-grey">
+                <a href="#" class="w3-bar-item w3-button w3-green w3-mobile">Emprestar</a>
+                <a href="#" class="w3-bar-item w3-button w3-green w3-mobile">Devolver</a>
+            </div>
+        </nav>
+        <nav class="w3-dropdown-hover w3-mobile">
+            <button class="w3-button">Relatórios</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border w3-dark-grey">
+                <a href="#" class="w3-bar-item w3-button w3-green w3-mobile">Empréstimo</a>
+                <a href="#" class="w3-bar-item w3-button w3-green w3-mobile">Devoluções em atraso</a>
+            </div>
+        </nav>
+    </header>
+    <!-- TELA DE CADASTRO -->
+    <section class="w3-container w3-light-gray">
+        <h1>Cadastro de Livros</h1>
+
+        <form class="w3-card-4 w3-light-white w3-padding-16 w3-margin">
+            <div class="w3-row">
+                <div class="w3-col w3-container m3 l3">
+                    <label for="title">Título:</label>
+                    <input type="text" id="title" class="w3-input w3-border w3-round" placeholder="Digite o título do livro:" required>
+                </div>
+                <div class="w3-col w3-container m3 l3">
+                    <label for="subtitle">Subtítulo:</label>
+                    <input type="text" id="subtitle" class="w3-input w3-border w3-round" placeholder="Digite o subtítulo do livro (se houver):">
+                </div>
+                <div class="w3-col w3-container m3 l3">
+                    <label for="autor">Autor:</label>
+                    <select id="autor" class="w3-select w3-border w3-round" name="option">
+                        <option value="" disabled selected>Escolha um autor</option>
+                        <option value="1"> Autor 1</option>
+                        <option value="2"> Autor 2</option>
+                        <option value="3"> Autor 3</option>
+                    </select>
+                </div>
+                <div class="w3-col w3-container m3 l3">
+                    <label for="editora">Editora:</label>
+                    <select id="editora" class="w3-select w3-border w3-round" name="option">
+                        <option value="" disabled selected>Escolha uma editora</option>
+                        <option value="1"> Editora 1</option>
+                        <option value="2"> Editora 2</option>
+                        <option value="3"> Editora 3</option>
+                    </select>
+                </div>
+                <!-- Categoria(s) (select com categorias) -->
+                <div class="w3-col w3-container m3 l3">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" class="w3-select w3-border w3-round" name="option">
+                        <option value="" disable selcted>Escolha uma categoria</option>
+                        <option value="1"> Categoria 1</option>
+                        <option value="2"> Categoria 2</option>
+                        <option value="3"> Categoria 3</option>
+                    </select>
+                </div>
+                <!-- ano de publicacao -->
+                <div class="w3-col w3-container m3 l3">
+                    <label for="dataPubli">Data de Publicação:</label>
+                    <input type="date" id="dataPubli" class="w3-input w3-border w3-round" required>
+                </div>
+
+
+
+
+
+
+
+                <div class="w3-col w3-container m3 l3">
+                    <label for="tel">Telefone:</label>
+                    <input type="tel" id="tel" class="w3-input w3-border w3-round" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+            </div>
+            <div class="w3-row w3-margin-top">
+                <div class="w3-col w3-container m3 l3">
+                    <label for="areaAtuacao">Área de atuação:</label>
+                    <input type="text" id="areaAtuacao" class="w3-input w3-border w3-round" required>
+                </div>
+            </div>
+            <div class="w3-row w3-margin-top">
+                <div class="w3-col w3-container m3 l3">
+                    <button class="w3-button w3-green w3-margin-top w3-round" type="submit">Cadastrar</button>
+                    <button class="w3-button w3-gray-light w3-margin-top w3-round" type="button">Limpar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
+
+<!-- 
+5. LIVROS:
+
+- Título
+
+- Subtítulo (se houver)
+
+- Autor(es) (select com autores)
+
+- Editora (select com as editoras cadastradas)
+
+- Categoria(s) (select com categorias)
+
+- Ano de publicação
+
+- Edição
+
+- Número de páginas
+
+- Sinopse
+
+- Capa do livro (campo para url da imagem)
+
+- Preço
+
+- Quantidade em estoque
+
+- Status (disponível/indisponível) (radio buitton)
+https://www.w3schools.com/w3css/w3css_input.asp
+- Data de cadastro
+ -->
