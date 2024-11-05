@@ -44,14 +44,33 @@
 
         <form class="w3-card-4 w3-light-white w3-padding-16 w3-margin">
             <div class="w3-row">
+                <!-- Titulo -->
                 <div class="w3-col w3-container m3 l3">
-                    <label for="title">Título:</label>
+                    <label for="title"> Título: </label>
                     <input type="text" id="title" class="w3-input w3-border w3-round" placeholder="Digite o título do livro:" required>
                 </div>
+
+                <!-- Subtitulo -->
                 <div class="w3-col w3-container m3 l3">
-                    <label for="subtitle">Subtítulo:</label>
-                    <input type="text" id="subtitle" class="w3-input w3-border w3-round" placeholder="Digite o subtítulo do livro (se houver):">
+                    <label for="subtitle">Subtítulo (se houver):</label>
+                    <input type="text" id="subtitle" class="w3-input w3-border w3-round" placeholder="Digite o subtítulo do livro:">
                 </div>
+
+                <!-- edicao -->
+                <div class="w3-col w3-container m3 l3">
+                    <label for="edicao">Edição do livro:</label>
+                    <input type="text" id="edicao" class="w3-input w3-border w3-round" placeholder="Digite a edição do livro:" required>
+                </div>
+
+                <!-- Sinopse -->
+                <div class="w3-col w3-container m3 l3">
+                    <label for="sinopse">Sinopse do Livro:</label>
+                    <input type="text" id="sinopse" class="w3-input w3-border w3-round" placeholder="Digite a sinopse do livro:">
+                </div>
+            </div>
+
+            <div class="w3-row">
+                <!-- Autor -->
                 <div class="w3-col w3-container m3 l3">
                     <label for="autor">Autor:</label>
                     <select id="autor" class="w3-select w3-border w3-round" name="option">
@@ -61,6 +80,8 @@
                         <option value="3"> Autor 3</option>
                     </select>
                 </div>
+
+                <!-- Editora -->
                 <div class="w3-col w3-container m3 l3">
                     <label for="editora">Editora:</label>
                     <select id="editora" class="w3-select w3-border w3-round" name="option">
@@ -70,39 +91,72 @@
                         <option value="3"> Editora 3</option>
                     </select>
                 </div>
+
                 <!-- Categoria(s) (select com categorias) -->
                 <div class="w3-col w3-container m3 l3">
                     <label for="categoria">Categoria</label>
                     <select id="categoria" class="w3-select w3-border w3-round" name="option">
-                        <option value="" disable selcted>Escolha uma categoria</option>
+                        <option value="" disabled selected>Escolha uma categoria</option>
                         <option value="1"> Categoria 1</option>
                         <option value="2"> Categoria 2</option>
                         <option value="3"> Categoria 3</option>
                     </select>
                 </div>
+            </div>
+
+            <div class="w3-row">
+                <!-- Preço -->
+                <div class="w3-col w3-container m3 l3">
+                    <label for="preco">Preço do livro:</label>
+                    <input type="number" id="preco" class="w3-select w3-border w3-round" min="1" placeholder="Em reais (R$)" required> 
+                </div>
+
+                <!-- Quantidade em estoque -->
+                <div class="w3-col w3-container m3 l3">
+                    <label for="estoque">Quantidade no estoque:</label>
+                    <input type="number" id="estoque" class="w3-select w3-border w3-round" min="1" max="100" placeholder="Maximo 100." required> 
+                </div>
+
+                <!-- Número de páginas -->
+                <div class="w3-col w3-container m3 l3">
+                    <label for="paginas">Número de paginas:</label>
+                    <input type="number" id="paginas" class="w3-select w3-border w3-round" min="1" max="50000" required> 
+                </div>
+                
+            </div>
+            
+            <div class="w3-row">
                 <!-- ano de publicacao -->
                 <div class="w3-col w3-container m3 l3">
                     <label for="dataPubli">Data de Publicação:</label>
                     <input type="date" id="dataPubli" class="w3-input w3-border w3-round" required>
                 </div>
 
-
-
-
-
-
-
+                <!-- Data de cadastro -->
                 <div class="w3-col w3-container m3 l3">
-                    <label for="tel">Telefone:</label>
-                    <input type="tel" id="tel" class="w3-input w3-border w3-round" placeholder="(XX) XXXXX-XXXX" required>
+                    <label for="dataCadastro">Data de Cadastro:</label>
+                    <input type="date" id="dataCadastro" class="w3-input w3-border w3-round" required>
+                </div>
+
+                <!-- Status -->
+                <div>
+                    <label for="status">Status do livro:</label>
+                    <input class="w3-radio" type="radio" name="status" value="disponível">
+                    <label>Disponível</label>
+                    
+                    <input class="w3-radio" type="radio" name="status" value="indisponível">
+                    <label>Indisponível</label>
                 </div>
             </div>
-            <div class="w3-row w3-margin-top">
+
+            <div classs="w3-row">
+                <!-- Capa do livro -->
                 <div class="w3-col w3-container m3 l3">
-                    <label for="areaAtuacao">Área de atuação:</label>
-                    <input type="text" id="areaAtuacao" class="w3-input w3-border w3-round" required>
+                    <label for="capa">Envie a capa do livro:</label>
+                    <input type="file" id="capa" name="myfile" class="w3-input w3-border w3-round">
                 </div>
             </div>
+            
             <div class="w3-row w3-margin-top">
                 <div class="w3-col w3-container m3 l3">
                     <button class="w3-button w3-green w3-margin-top w3-round" type="submit">Cadastrar</button>
@@ -113,35 +167,3 @@
     </section>
 </body>
 </html>
-
-<!-- 
-5. LIVROS:
-
-- Título
-
-- Subtítulo (se houver)
-
-- Autor(es) (select com autores)
-
-- Editora (select com as editoras cadastradas)
-
-- Categoria(s) (select com categorias)
-
-- Ano de publicação
-
-- Edição
-
-- Número de páginas
-
-- Sinopse
-
-- Capa do livro (campo para url da imagem)
-
-- Preço
-
-- Quantidade em estoque
-
-- Status (disponível/indisponível) (radio buitton)
-https://www.w3schools.com/w3css/w3css_input.asp
-- Data de cadastro
- -->
