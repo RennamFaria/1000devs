@@ -1,0 +1,44 @@
+{
+  "alunos": [
+    {
+      "id": "1",
+      "nome": "Ivo",
+      "CPF": "123.456.789-00",
+      "email": "ivo@email.com",
+      "telefone": "11 10101-0101",
+      "data_cadastro": "11/11/2024"
+    },
+    {
+      "id": "4ee9",
+      "nome": "dwa",
+      "CPF": "dwa",
+      "email": "dwa@dwa",
+      "tel": "dwa",
+      "date": "2024-11-08"
+    },
+    {
+      "id": "0f6f",
+      "nome": "dwa",
+      "CPF": "dwa",
+      "email": "dwa@dwa",
+      "tel": "dwa",
+      "date": "2024-11-08"
+    },
+    {
+      "id": "2871",
+      "nome": "dwads",
+      "CPF": "124122123",
+      "email": "dwads@teste.com",
+      "tel": "2131241241432",
+      "date": "2024-11-06"
+    },
+    {
+      "id": "de1b",
+      "nome": "dwads",
+      "CPF": "124122123",
+      "email": "dwads@teste.com",
+      "tel": "2131241241432",
+      "date": "2024-11-06"
+    }
+  ]
+}
