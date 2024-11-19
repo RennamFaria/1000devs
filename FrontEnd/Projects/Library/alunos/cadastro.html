@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca - Cadastro de Alunos</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="../style.css">
-    <script src="../scripts/aluno.js" defer></script>
+    <script src="../scripts/alunos.js" defer></script>
 </head>
 <body>
     <!-- MENU -->
@@ -16,8 +15,8 @@
         <nav class="w3-dropdown-hover w3-mobile">
             <button class="w3-button">Cadastro</button>
             <div class="w3-dropdown-content w3-bar-block w3-border w3-dark-grey">
-                <a href="../alunos/cadastro.html" class="w3-bar-item w3-button w3-green w3-mobile">Alunos</a>
-                <a href="../professores/cadastro.html" class="w3-bar-item w3-button w3-green w3-mobile">Professsores</a>
+                <a href="./cadastro.html" class="w3-bar-item w3-button w3-green w3-mobile">Alunos</a>
+                <a href="../professores/cadastro.html" class="w3-bar-item w3-button w3-green w3-mobile">Professores</a>
                 <a href="#" class="w3-bar-item w3-button w3-green w3-mobile">Autores</a>
                 <a href="#" class="w3-bar-item w3-button w3-green w3-mobile">Categorias</a>
                 <a href="#" class="w3-bar-item w3-button w3-green w3-mobile">Editoras</a>
@@ -43,7 +42,7 @@
     <section class="w3-container w3-light-gray">
         <h1>Cadastro de Alunos</h1>
 
-        <form class="w3-card-4 w3-light-white w3-padding-16 w3-margin" onsubmit="cadastrarAlunos(event)">
+        <form class="w3-card-4 w3-light-white w3-padding-16 w3-margin" onsubmit="cadastraAlunos(event)">
             <!-- Linha 1 (campo nome e campo CPF) -->
             <div class="w3-row">
                 <div class="w3-col w3-container m3 l3">
@@ -76,6 +75,21 @@
                 </div>
             </div>
         </form>
+        <table id="result">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Here should have the results of the db -->
+            </tbody>
+        </table>
     </section>
+    
 </body>
 </html>

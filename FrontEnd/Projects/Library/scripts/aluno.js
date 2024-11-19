@@ -29,10 +29,10 @@ async function cadastraAlunos(event) {
     })
   })
 
-  const response = await fetch(request)
-  const data = await response;
+  const response = await fetch(request);
+  const data = await response.json();
 
-  alert('Cadastrado com sucesso !')
+  alert('Cadastrado com sucesso !');
 }
 //Create    Read    Update    Delete
 //C         R       U         D
