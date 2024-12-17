@@ -13,6 +13,37 @@ public class JogoVelha {
     // considere que este valor não será alterado.
     final static int TAMANHO_TABULEIRO = 3;
 
+    static int selecionaNivel(Scanner teclado){
+        int nivel = 1;
+
+        try{
+            // Loop até o usuário enviar um caractere aceito
+            do{
+                // Recebe o valor do caractere que o usuario deseja competir com computador
+                System.out.println("Qual nível do computador deseja competir? (Opções 1, 2)");
+                nivel = teclado.nextInt();
+
+                // Checa se o caractere digitado é válido
+                if(nivel == 1 || nivel == 2){
+                    System.out.println("Nível válido!");
+                    System.out.println();
+                    break;
+                }
+                else{
+                    System.out.println("Nível inválido, digite novamente o número do nível");
+                    System.out.println();
+                }
+
+            }while(true);
+        }
+        catch(Exception e){
+            System.out.println("Erro na funçao 'selecionaNivel', erro: " + e);
+            System.out.println();
+        }
+        
+        return nivel;
+    }
+
    static char[][] inicializarTabuleiro(char[][] tabuleiro) {
         for (int i = 0; i < tabuleiro.length; i++) {
             for (int j = 0; j < tabuleiro[i].length; j++) {
@@ -152,6 +183,147 @@ public class JogoVelha {
         return jogadaValida;
    }
 
+   static String checaSeVencera(String posicoesLivres, char[][] tabuleiro, char caractere){
+        int tamanho = tabuleiro.length;
+        // Da para fazer com outro for sendo J so que limitamos para -2, 
+        // vai funcionar normalmente para 3x3, mas tbm ira funcionar para grades maiores de jogo da velha NxN
+
+        for (int i = 0; i < tamanho; i++) {
+            for(int j = 0; j < (tamanho - 2); j++){
+                // Checa LINHAS ( O | O |   )
+                if(tabuleiro[i][j] == caractere && tabuleiro[i][j+1] == caractere 
+                && posicoesLivres.contains(i + "" + (j+2))){ 
+                    return (i + "" + (j+2));
+                }
+                
+                //               ( O )
+                //               (---)
+                // Checa COLUNAS ( O )  
+                //               (---)
+                //               (   )
+                if(tabuleiro[j][i] == caractere && tabuleiro[j+1][i] == caractere 
+                && posicoesLivres.contains((j+2) + "" + i)){ 
+                    return ((j+2) + "" + i);
+                }
+
+                // Checa LINHAS meio ( O |   | O )
+                if(tabuleiro[i][j] == caractere && tabuleiro[i][j+2] == caractere 
+                && posicoesLivres.contains(i + "" + (j+1))){ 
+                    return (i + "" + (j+1));
+                }
+
+                //                    ( O )
+                //                    (---)
+                // Checa COLUNAS meio (   )  
+                //                    (---)
+                //                    ( O )
+                if(tabuleiro[j][i] == caractere && tabuleiro[j+2][i] == caractere 
+                && posicoesLivres.contains((j+1) + "" + i)){ 
+                    return ((j+1) + "" + i);
+                }
+
+            }
+            // Checa a ultima posiçao LINHA, inversamente (  | O | O )
+            if(tabuleiro[i][tamanho - 1] == caractere && tabuleiro[i][tamanho - 2] == caractere 
+                && posicoesLivres.contains(i + "" + (tamanho - 3))){ 
+                    return (i + "" + (tamanho - 3));
+            }
+
+            //                                             (   )
+            //                                             (---)
+            // Checa a ultima posiçao COLUNA, inversamente ( O )
+            //                                             (---)
+            //                                             ( O )
+            if(tabuleiro[tamanho - 1][i] == caractere && tabuleiro[tamanho - 2][i] == caractere 
+                && posicoesLivres.contains((tamanho - 3) + "" + i)){ 
+                    return ((tamanho - 3) + "" + i);
+            }
+
+            //                      ( O |   |   )
+            //                      (---|---|---)
+            // Checa DIAGONAIS meio (   |   |   )
+            //                      (---|---|---)
+            //                      (   |   | O )
+            if(tabuleiro[0][0] == caractere && tabuleiro[2][2] == caractere 
+                && posicoesLivres.contains(1 + "" + 1) || 
+                tabuleiro[0][2] == caractere && tabuleiro[2][0] == caractere 
+                && posicoesLivres.contains(1 + "" + 1)){ 
+            
+                return (1 + "" + 1);
+            }
+        }
+
+        // Checando para todas as DIAGONAIS se o meio delas está livre e os opostos posssuem jogada computador
+        // Precisa ser fora do for por causa que o numero de repetiçoes é diferente
+        for(int i = 0; i < (tamanho- 2); i++){
+            for(int j = 0; j < (tamanho - 2); j++){
+                //                 ( O |   |   )
+                //                 (---|---|---)
+                // Checa DIAGONAIS (   | O |   )
+                //                 (---|---|---)
+                //                 (   |   |   )
+                if(tabuleiro[i][j] == caractere && tabuleiro[i+1][j+1] == caractere 
+                && posicoesLivres.contains((i+2) + "" + (j+2))){ 
+                    return ((i+2) + "" + (j+2));
+                }
+
+                //                 (   |   | O )
+                //                 (---|---|---)
+                // Checa DIAGONAIS (   | O |   )
+                //                 (---|---|---)
+                //                 (   |   |   )
+                if(tabuleiro[i][j + 2] == caractere && tabuleiro[i+1][j+1] == caractere 
+                && posicoesLivres.contains((i+2) + "" + j)){ 
+                    return ((i+2) + "" + j);
+                }
+
+                //                      ( O |   |   )
+                //                      (---|---|---)
+                // Checa DIAGONAIS meio (   |   |   )
+                //                      (---|---|---)
+                //                      (   |   | O )
+                if(tabuleiro[i][j] == caractere && tabuleiro[i+2][j+2] == caractere 
+                    && posicoesLivres.contains((i+1) + "" + (j+1))){ 
+                
+                    return ((i+1) + "" + (j+1));
+                }
+
+                //                      (   |   | O )
+                //                      (---|---|---)
+                // Checa DIAGONAIS meio (   |   |   )
+                //                      (---|---|---)
+                //                      ( O |   |   )
+                if(tabuleiro[i][j+2] == caractere && tabuleiro[i+2][j] == caractere 
+                    && posicoesLivres.contains((i+1) + "" + (j+1))){ 
+                
+                    return ((i+1) + "" + (j+1));
+                }
+            }
+            //                 (   |   |   )
+            //                 (---|---|---)
+            // Checa DIAGONAIS (   | O |   )
+            //                 (---|---|---)
+            //                 (   |   | O )
+            if(tabuleiro[i+2][i+2] == caractere && tabuleiro[i+1][i+1] == caractere 
+            && posicoesLivres.contains((i) + "" + (i))){ 
+                return (i + "" + i);
+            }
+
+            //                 (   |   |   )
+            //                 (---|---|---)
+            // Checa DIAGONAIS (   | O |   )
+            //                 (---|---|---)
+            //                 ( O |   |   )
+            if(tabuleiro[i+2][i] == caractere && tabuleiro[i+1][i+1] == caractere 
+            && posicoesLivres.contains(i + "" + (i+2))){ 
+                return (i + "" + (i+2));
+            }
+        }
+        // Se nenhum dos casos foi valido retornara uma string vazia (""), que ser'a checada apos
+
+        return "";
+    }
+
    static int[] obterJogadaUsuario(String posicoesLivres, Scanner teclado) {
 
         while (true) {
@@ -179,9 +351,24 @@ public class JogoVelha {
         }
    }
 
-   static int[] obterJogadaComputador(String posicoesLivres) {
+   static int[] obterJogadaComputador(String posicoesLivres, char[][] tabuleiro, char caractereComputador, char caractereUsuario, int nivel) {
+        String jogada;
+        if(nivel == 2){
+            // Checagens para ver se há alguma maneira do computador ganhar
+            jogada = checaSeVencera(posicoesLivres, tabuleiro, caractereComputador);
+            if(!jogada.isEmpty()){
+                return converterJogadaStringParaVetorInt(jogada);
+            }
+            
+            // Checagens para ver se há alguma maneira do usuario ganhar, se sim, faça a jogada naquela posição
+            jogada = checaSeVencera(posicoesLivres, tabuleiro, caractereUsuario);
+            if(!jogada.isEmpty()){
+                return converterJogadaStringParaVetorInt(jogada);
+            }
+        }
+    
+        // Jogada randomica, caso nivel = 1 ou nao achou jogada inteligente
         String[] posicoesArray = posicoesLivres.split(";");
-
         Random random = new Random();
         int indiceSorteado = random.nextInt(posicoesArray.length);
         String jogadaSorteada = posicoesArray[indiceSorteado];
@@ -222,10 +409,10 @@ public class JogoVelha {
         return tabuleiro;
    }
 
-   static char[][] processarVezComputador(char[][] tabuleiro, char caractereComputador) {
+   static char[][] processarVezComputador(char[][] tabuleiro, char caractereComputador, char caractereUsuario, int nivel) {
         String posicoesLivres = retornarPosicoesLivres(tabuleiro);
 
-        int [] jogada = obterJogadaComputador(posicoesLivres);
+        int [] jogada = obterJogadaComputador(posicoesLivres, tabuleiro, caractereComputador, caractereUsuario, nivel);
 
         tabuleiro [jogada[0]][jogada[1]] = caractereComputador;
 
@@ -400,6 +587,8 @@ public class JogoVelha {
 
         char[][] tabuleiro = new char[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO];
         
+        int nivel = selecionaNivel(teclado);
+
         //ToDo: Faça a inicialização do tabuleiro aqui
         tabuleiro = inicializarTabuleiro(tabuleiro);
 
@@ -443,7 +632,7 @@ public class JogoVelha {
             } else {
 
                 //ToDo: Execute processar vez do computador
-                tabuleiro = processarVezComputador(tabuleiro, caractereComputador);
+                tabuleiro = processarVezComputador(tabuleiro, caractereComputador, caractereUsuario, nivel);
 
                 // Verifica se o computador venceu
                 //ToDo: Este if deve executar apenas se teve ganhador
